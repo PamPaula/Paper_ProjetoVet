@@ -1,0 +1,74 @@
+﻿@model ProjetoVetMVCNew.Models.Animais
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Novo</h1>
+
+<h4>Informe os dados do seu animal.</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Responsavel" class="control-label"></label>
+                <input asp-for="Responsavel" class="form-control" />
+                <span asp-validation-for="Responsavel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Genero" class="control-label"></label>
+                <input asp-for="Genero" class="form-control" />
+                <span asp-validation-for="Genero" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Porte" class="control-label"></label>
+                <input asp-for="Porte" class="form-control" />
+                <span asp-validation-for="Porte" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pelagem" class="control-label"></label>
+                <input asp-for="Pelagem" class="form-control" />
+                <span asp-validation-for="Pelagem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Raca" class="control-label"></label>
+                <input asp-for="Raca" class="form-control" />
+                <span asp-validation-for="Raca" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Idade" class="control-label"></label>
+                <input asp-for="Idade" class="form-control" />
+                <span asp-validation-for="Idade" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Castrado" class="control-label"></label>
+                <input asp-for="Castrado" class="form-control" />
+                <span asp-validation-for="Castrado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Observacao" class="control-label"></label>
+                <input asp-for="Observacao" class="form-control" />
+                <span asp-validation-for="Observacao" class="text-danger"></span>
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
